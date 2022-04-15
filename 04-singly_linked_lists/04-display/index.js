@@ -45,7 +45,7 @@ class SLL {
         if ( !this.head ) { return false; }
 
         let runner = this.head;
-        while ( !runner.next ) {
+        while ( runner ) {
             if ( runner.data == value ) { return true; }
             runner = runner.next;
         };
@@ -63,6 +63,21 @@ class SLL {
             runner = runner.next;
         };
         return length;
+    };
+    
+    // ================= 04-display
+    display() {
+        if ( !this.head ) { console.log("SLL: | |"); }
+        
+        let consoleLog = "SLL: |"
+        let runner = this.head;
+        while ( runner.next ) {
+            consoleLog += ` ${runner.data},`
+            runner = runner.next;
+        };
+        consoleLog += ` ${runner.data}`
+        consoleLog += " |"
+        console.log( consoleLog );
     };
 };
 
@@ -83,7 +98,10 @@ myList.addFront( 10 );
 // console.log( myList.contains( 10 ) );
 
 // ================= 03-length
-console.log( myList.length() );
+// console.log( myList.length() );
 myList.addFront( 15 );
 myList.addFront( 20 );
-console.log( myList.length() );
+// console.log( myList.length() );
+
+// ================= 04-display
+myList.display();

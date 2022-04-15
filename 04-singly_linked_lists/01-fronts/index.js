@@ -39,3 +39,14 @@ class SLL {
         return this.head;
     };
 };
+
+// ================= 01-fronts
+const myList = new SLL();
+
+console.log(myList.front());
+myList.addFront( 5 );
+console.log(myList.front());
+myList.addFront( 10 );
+console.log(myList.front());
+myList.removeFront();
+console.log(myList.front());

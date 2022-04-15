@@ -45,10 +45,26 @@ class SLL {
         if ( !this.head ) { return false; }
 
         let runner = this.head;
-        while ( !runner.next ) {
+        while ( runner ) {
             if ( runner.data == value ) { return true; }
             runner = runner.next;
         };
         return false;
     };
 };
+
+// ================= 01-fronts
+const myList = new SLL();
+
+// console.log(myList.front());
+myList.addFront( 5 );
+// console.log(myList.front());
+myList.addFront( 10 );
+// console.log(myList.front());
+// myList.removeFront();
+// console.log(myList.front());
+
+// ================= 02-contains
+console.log( myList.contains( 5 ) );
+console.log( myList.contains( 0 ) );
+console.log( myList.contains( 10 ) );
