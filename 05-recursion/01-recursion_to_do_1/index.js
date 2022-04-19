@@ -1,4 +1,3 @@
-// ================= 01-to_do_1
 const rSigma = num => {
     if ( num < 1 ) {
         return 0;
